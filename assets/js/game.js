@@ -4,9 +4,11 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 //ememy data
-var enemyName = "Roberto";
+var enemyNames = ["Roberto", "Amy Android", "Robo Trumble", "Killer Kam", "Crusher Curt", "Sally the Slayer"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+
+//arrays
 
 
 var fight = function() {
@@ -40,8 +42,9 @@ if (playerHealth <= 0) {
 
 };
 
-fight();
-
+var fight = function(enemyName) {
+    
+};
 var promptFight = window.confirm ("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
 //if player chooses fight
@@ -79,3 +82,16 @@ if (promptFight === "fight" || promptFight === "FIGHT" || promptFight === "Fight
 else {
     fight();
 };
+
+for (var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
+
+//game states
+
+//WIN player has defeted all robots
+    //fight all enemy robots
+    //defeat each enemy
+
+
+// LOSE player robot had died
